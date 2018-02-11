@@ -1,0 +1,18 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	int num = 10;
+	int* pNum = &num;
+
+	cout << "num狼 蔼 : " << num << " " << *pNum << endl;
+	cout << "num狼 林家 : " << &num << " " << pNum << endl << endl;
+	cout << "pNum狼 林家 : " << &pNum << endl;
+
+	return 0;
+
+}

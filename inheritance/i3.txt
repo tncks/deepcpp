@@ -1,0 +1,53 @@
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class HandPhone
+{
+public:
+	char bunho[80]; bool imode;
+
+	HandPhone();
+	HandPhone(char *, bool);
+};
+
+HandPhone::HandPhone()
+{
+	strcpy(bunho, "¹Ì¼³Á¤");
+	imode = false;
+}
+
+HandPhone::HandPhone(char *b, bool i)
+{
+	strcpy(bunho, b); imode = i;
+}
+
+class Employee
+{
+public:
+	int number;
+	char *name;
+	long pay;
+	HandPhone iPhone;
+
+	Employee();
+	Employee(int a, char *s, long b, char *c, bool k);
+};
+
+Employee::Employee() {};
+
+Employee::Employee(int a, char *s, long b, char *c, bool k)
+	: iPhone(c, k)
+{
+	number = a;
+	strcpy(name, s);
+	pay = b;
+}
+
+int main()
+{
+	Employee Skylee(1, "skylee", 99999999, "010-1234-1234", true);
+	return 0;
+}

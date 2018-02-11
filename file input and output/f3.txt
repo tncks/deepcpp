@@ -1,0 +1,38 @@
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	system("title file input and output");
+
+	int num;
+
+	for (;;) {
+		cout << "숫자를 입력하세요 : ";
+		cin >> num;
+
+		if (cin.fail())
+		{
+			cout << "입력 오류 발생, 오류번호 : " << cin.rdstate() << endl;
+			cin.clear();
+			cin.ignore(128, '\n');
+			cout << endl;
+			continue;
+		}
+
+		cout << "입력한 숫자 : " << num << endl << endl;
+		cin.ignore(128, '\n');
+	}
+
+
+	cout << "프로그램 종료" << endl;
+
+
+
+	return 0;
+}

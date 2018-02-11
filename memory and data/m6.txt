@@ -1,0 +1,24 @@
+#include "stdafx.h"
+#include <iostream>
+#include <cassert>
+
+using namespace std;
+
+int main()
+{
+	char *pData = nullptr;
+	int result;
+
+	assert(pData != nullptr);
+
+	if (pData != nullptr)
+	{
+		result = *pData;
+	}
+
+	cout << "end" << endl;
+
+
+	return 0;
+
+}

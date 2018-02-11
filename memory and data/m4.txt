@@ -1,0 +1,16 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	char* pChar = nullptr;
+
+	//cout << pChar << endl;
+	cout << reinterpret_cast<int*>(pChar) << endl;
+
+	return 0;
+
+}

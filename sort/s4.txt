@@ -1,0 +1,42 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+#include <list>
+
+using namespace std;
+
+void ShowItems(const list<string> &item_list);
+
+int main()
+{
+	system("title list testing");
+
+	list<string> item_list = { "¿Â∞©", "∞À", "πÊ∆–" };
+	ShowItems(item_list);
+
+	cout << "¡÷∏‘π‰, »∏∫πæ‡ √ﬂ∞° \n";
+	item_list.push_back("¡÷∏‘π‰");
+	item_list.push_front("»∏∫πæ‡");
+	ShowItems(item_list);
+
+	cout << "∞À ªË¡¶ \n";
+	item_list.remove("∞À");
+	ShowItems(item_list);
+
+	return 0;
+
+}
+
+void ShowItems(const list<string> &item_list) {
+
+	for (list<string>::const_iterator iter = item_list.begin(); iter != item_list.end(); ++iter)
+	{
+		cout << *iter << endl;
+	}
+
+	cout << "---------------------------------------------------" << endl;
+
+
+}

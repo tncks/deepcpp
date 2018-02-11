@@ -1,0 +1,17 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	char charBuffer[5];
+	int intBuffer[5];
+
+	cout << sizeof(charBuffer) << endl << endl;
+	cout << sizeof(intBuffer) << endl << endl;
+
+	return 0;
+
+}

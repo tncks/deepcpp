@@ -1,0 +1,15 @@
+#include "stdafx.h"
+#include <stdio.h>
+
+int n;
+
+int main()
+{
+	FILE *in = fopen("in.txt", "r");
+	FILE *out = fopen("out.txt", "w");
+
+	fscanf(in, "%d", &n);
+	fprintf(out, "%d\n", n);
+
+	return 0;
+}

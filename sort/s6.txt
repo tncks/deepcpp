@@ -1,0 +1,32 @@
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	system("title file input and output");
+
+	ofstream write_file("test.txt");
+
+	if (write_file.fail() == true)
+	{
+		perror("test.txt를 생성하지 못했습니다!");
+		exit(EXIT_FAILURE);
+	}
+
+	string test = "Hello World!\n";
+
+	write_file << test;
+
+	cout << "파일에 문자열을 출력했습니다.\n";
+
+	write_file.close();
+
+	return 0;
+
+
+}

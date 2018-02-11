@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	system("title file input and output");
+
+	string test;
+
+	cout << "문자열을 입력해주세요 : ";
+	cin >> test;
+	cout << endl << "입력한 문자열: " << test << endl << endl;
+
+
+	cin.ignore(128, '\n'); //입력 버퍼를 비움
+
+
+	cout << "문자열을 입력해주세요 : ";
+	getline(cin, test);
+	cout << endl << "입력한 문자열 : " << test << endl << endl;
+
+	return 0;
+}

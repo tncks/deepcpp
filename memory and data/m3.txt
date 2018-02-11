@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	int intNum;
+
+	cout << "intNum狼 林家 : " << &intNum << endl;
+	cout << "intNum狼 林家 : " << reinterpret_cast<int>(&intNum) << endl << endl;
+
+
+	float floatNum;
+
+	cout << "floatNum狼 林家 : " << &floatNum << endl;
+	cout << "floatNum狼 林家 : " << reinterpret_cast<int>(&floatNum) << endl << endl;
+
+	
+	return 0;
+
+}

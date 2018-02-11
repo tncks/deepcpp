@@ -1,0 +1,45 @@
+#include "stdafx.h"
+#include <cassert>
+#include <iostream>
+using namespace std;
+
+int ReferValue(int& rhs);
+
+int IndirectValue(int* pValue);
+
+int main()
+{
+	int *pNum = new int;
+
+	//assert(pNum != nullptr);
+	if (pNum == nullptr) printf("동적 할당에 실패했습니다.\n\n");
+
+	*pNum = 100;
+
+	printf("증가되기 전 pNum의 역참조값 : %d\n", *pNum);
+	ReferValue(*pNum);
+	printf("증가되고 난 pNum의 역참조값 : %d\n", *pNum);
+
+	cout << endl << endl;
+
+	printf("증가되기 전 pNum의 역참조값 : %d\n", *pNum);
+	IndirectValue(pNum);
+	printf("증가되고 난 pNum의 역참조값 : %d\n", *pNum);
+
+	delete pNum;
+
+	return 0;
+
+}
+
+int ReferValue(int& rhs)
+{
+	return rhs++;
+}
+
+int IndirectValue(int* pValue)
+{
+	(*pValue)++;
+	return 0;
+}
+

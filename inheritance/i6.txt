@@ -1,0 +1,30 @@
+#include "stdafx.h"
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+list<int> mylist;
+list<int> ::iterator finder;
+
+int main()
+{
+	mylist.push_front(1);
+	mylist.push_front(2);
+	mylist.push_front(3);
+
+	finder = mylist.begin();
+
+	for (finder = mylist.begin(); finder != mylist.end(); finder++)
+	{
+		cout << *finder << endl;
+		if (*finder == 1) mylist.insert(finder, 55);
+	}
+
+	for (finder = mylist.begin(); finder != mylist.end(); finder++)
+	{
+		cout << *finder << endl;
+	}
+
+	return 0;
+}

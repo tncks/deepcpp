@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+#include <list>
+
+using namespace std;
+
+void ShowItems(const list<string> &item_list);
+
+int main()
+{
+	system("title list testing");
+
+	list<int> empty_list;
+
+	cout << "empty_list의 크기 : " << empty_list.size() << endl;
+
+	list<int> ten_list(10);
+	
+	cout << "ten_list의 크기 : " << ten_list.size() << endl;
+}
+
+void ShowItems(const list<string> &item_list) {
+
+}

@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	const int buffer_length = 5;
+
+	char oneByteBuffer[buffer_length];
+	memset(oneByteBuffer, 'A', sizeof(oneByteBuffer));
+	for (int i = 0; i < buffer_length; ++i)
+	{
+		cout << oneByteBuffer[i] << " ";
+	}
+
+	cout << endl << endl;
+
+	int fourByteBuffer[buffer_length];
+	memset(fourByteBuffer, 'A', sizeof(fourByteBuffer));
+	for (int i = 0; i < buffer_length; ++i)
+	{
+		cout << fourByteBuffer[i] << " ";
+	}
+
+	cout << endl << endl;
+
+	int copyBuffer[buffer_length];
+	memcpy(copyBuffer, fourByteBuffer, sizeof(fourByteBuffer));
+	for (int i = 0; i < buffer_length; ++i)
+	{
+		cout << fourByteBuffer[i] << " ";
+	}
+
+	cout << endl << endl;
+
+	return 0;
+
+}

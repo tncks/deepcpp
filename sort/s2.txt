@@ -1,0 +1,44 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+void ShowItems(const vector<string> &item_vec);
+
+int main()
+{
+	system("title vector test");
+
+	vector<string> item_vec = { "¿Â∞©","∞À","πÊ∆–" };
+	ShowItems(item_vec);
+
+	cout << "< ¡÷∏‘π‰, »∏∫πæ‡ √ﬂ∞° ! > \n";
+	item_vec.push_back("¡÷∏‘π‰");
+	item_vec.push_back("»∏∫πæ‡");
+	ShowItems(item_vec);
+
+	cout << " < »∏∫πæ‡ ªË¡¶ ! > \n";
+	item_vec.pop_back();
+	ShowItems(item_vec);
+
+	cout << " < ∞À ¿ßƒ°ø° ¡÷∏‘π‰ ≥÷±‚! >" << endl;
+	item_vec[1] = item_vec.back();
+	item_vec.pop_back();
+	ShowItems(item_vec);
+
+	return 0;
+
+}
+
+void ShowItems(const vector<string> &item_vec)
+{
+	for (int i = 0; i < static_cast<int>(item_vec.size()); ++i)
+	{
+		cout << i << ". " << item_vec[i] << endl;
+	}
+
+	cout << "--------------------" << endl;
+}

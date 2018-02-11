@@ -1,0 +1,55 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+#include <list>
+
+using namespace std;
+
+void ShowItems(const list<string> &item_list);
+
+int main()
+{
+	system("title list testing");
+
+	list<string> item_list = { "Àå°©", "°Ë", "¹æÆĞ" };
+	item_list.push_back("ÁÖ¸Ô¹ä");
+	item_list.push_front("È¸º¹¾à");
+	item_list.pop_back();
+	item_list.pop_front();
+	item_list.remove("°Ë");
+	item_list.push_back("ÆøÅº");
+	item_list.push_back("°î±ªÀÌ");
+	item_list.push_back("ÈÅ¼¦");
+
+	ShowItems(item_list);
+
+	for (list<string>::iterator iter = item_list.begin(); iter != item_list.end();)
+	{
+		if (*iter == "°î±ªÀÌ")
+		{
+			iter = item_list.erase(iter);
+		}
+		else {
+			++iter;
+		}
+	}
+
+	ShowItems(item_list);
+
+	return 0;
+
+}
+
+void ShowItems(const list<string> &item_list) {
+	
+	for (auto iter = item_list.begin(); iter != item_list.end(); ++iter)
+	{
+		cout << *iter << endl;
+	}
+
+	cout << "---------------------------------------------------" << endl;
+
+
+}

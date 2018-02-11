@@ -1,0 +1,30 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	system("title printf()와 char 문자열");
+
+	char *asterisk;
+	const int kSize = 6;
+	asterisk = new char[kSize];
+
+	for (int i = 0; i < kSize - 1; ++i)
+	{
+		asterisk[i] = '*';
+	}
+
+	asterisk[kSize - 1] = '\0';
+
+	for (int i = kSize - 2; i >= 0; --i)
+	{
+		printf("%s\n", asterisk + i);
+	}
+	
+	delete asterisk;
+
+	return 0;
+}

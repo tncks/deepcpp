@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int g_num = 0;
+int g_killStack[10000000000];
+
+int main()
+{
+	int num;
+
+	char killStack[10000000000];
+
+
+	cout << g_killStack[2] << " " << &g_killStack[1] << endl;
+
+
+	return 0;
+
+}

@@ -1,0 +1,37 @@
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+class Computer {
+public:
+	void PrintInfo()
+	{
+		cout << "Desktop computer" << endl;
+
+		return;
+	}
+};
+
+class Notebook : public Computer {
+private:
+	double battery;
+public:
+	void PrintInfo() {
+
+		cout << "Notebook Computer" << endl;
+		cout << "Battery : " << battery << "%" << endl;
+
+		return;
+	}
+};
+
+int main() {
+	Notebook *note = new Notebook;
+
+	note->PrintInfo();
+
+	delete note;
+
+	return 0;
+}

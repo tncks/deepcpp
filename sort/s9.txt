@@ -1,0 +1,45 @@
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	system("title file input and output");
+
+	ifstream read_file("test.txt");
+
+	if (read_file.fail() == true)
+	{
+		perror("test.txt를 읽어오지 못했습니다!");
+		exit(EXIT_FAILURE);
+	}
+
+	string test;
+
+	getline(read_file, test);
+	cout << test << endl;
+
+	/*for (; read_file >> test;)
+	{
+		cout << test << endl;
+	}*/
+
+
+	//read_file >> test;
+
+	//cout << test << endl;
+
+
+	read_file.close();
+
+
+	cout << "파일 읽기 완료\n";
+
+	return 0;
+
+
+}
